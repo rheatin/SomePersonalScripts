@@ -75,4 +75,4 @@ def remove_empty_folders(directory: str) -> None:
 
 
 if __name__ == "__main__":
-    remove_empty_folders(r"C:\Users\smoon\Documents")
+    remove_empty_folders(r"/share/incompleted/Driver")
