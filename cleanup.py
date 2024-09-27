@@ -75,4 +75,11 @@ def remove_empty_folders(directory: str) -> None:
 
 
 if __name__ == "__main__":
-    remove_empty_folders(r"/share/incompleted/Driver")
+    import sys
+    if len(sys.argv) > 1:
+        if os.path.isdir(sys.argv[1]):
+            remove_empty_folders(sys.argv[1])
+        else:
+            print(f"\033[91mError: '{sys.argv[1]}' is not a directory.\033[0m")
+    else:
+        remove_empty_folders(r"/share/incompleted/Driver")
